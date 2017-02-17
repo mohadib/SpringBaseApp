@@ -15,7 +15,7 @@
     </authentication-manager>
 
     <beans:bean name="authenticationEntryPoint" class="org.springframework.security.web.authentication.Http403ForbiddenEntryPoint"/>
-    <beans:bean name="userService" class="org.openactive.ReactNotes.login.JpaUserService"/>
+    <beans:bean name="userService" class="org.openactive.SpringBaseApp.login.JpaUserService"/>
     <beans:bean name="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
         <beans:constructor-arg name="strength" value="${password.strength}"/>
     </beans:bean>

@@ -1,4 +1,4 @@
-package org.openactive.ReactNotes.domain;
+package org.openactive.SpringBaseApp.domain;
 
 import javax.persistence.*;
 

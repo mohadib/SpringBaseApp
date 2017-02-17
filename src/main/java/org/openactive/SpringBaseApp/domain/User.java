@@ -1,7 +1,7 @@
-package org.openactive.ReactNotes.domain;
+package org.openactive.SpringBaseApp.domain;
 
-import org.openactive.ReactNotes.domain.listeners.CreatableAndUpdateable;
-import org.openactive.ReactNotes.domain.listeners.CreateUpdateListener;
+import org.openactive.SpringBaseApp.domain.listeners.CreatableAndUpdateable;
+import org.openactive.SpringBaseApp.domain.listeners.CreateUpdateListener;
 
 import javax.persistence.*;
 import java.util.Date;

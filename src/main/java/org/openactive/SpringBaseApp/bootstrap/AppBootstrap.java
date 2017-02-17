@@ -1,9 +1,9 @@
-package org.openactive.ReactNotes.bootstrap;
+package org.openactive.SpringBaseApp.bootstrap;
 
-import org.openactive.ReactNotes.dao.RoleDao;
-import org.openactive.ReactNotes.dao.UserDao;
-import org.openactive.ReactNotes.domain.Role;
-import org.openactive.ReactNotes.domain.User;
+import org.openactive.SpringBaseApp.dao.RoleDao;
+import org.openactive.SpringBaseApp.dao.UserDao;
+import org.openactive.SpringBaseApp.domain.Role;
+import org.openactive.SpringBaseApp.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -37,6 +37,6 @@ public class AppBootstrap extends LoadData
     jason.setEmail("jdavis@openactive.org");
     jason.setPassword(passwordEncoder.encode("letmein"));
     jason.setRoles(Arrays.asList( adminRole, userRole));
-    jason = userDao.save(jason);
+    userDao.save(jason);
   }
 }

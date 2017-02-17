@@ -10,6 +10,6 @@
 
     <security:global-method-security secured-annotations="enabled" />
     <mvc:annotation-driven />
-    <context:component-scan base-package="org.openactive.ReactNotes.controller"/>
+    <context:component-scan base-package="org.openactive.SpringBaseApp.controller"/>
 
 </beans>

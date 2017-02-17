@@ -1,8 +1,8 @@
-package org.openactive.ReactNotes.controller;
+package org.openactive.SpringBaseApp.controller;
 
 import org.apache.commons.lang3.StringUtils;
-import org.openactive.ReactNotes.login.LoginRequest;
-import org.openactive.ReactNotes.login.LoginResponse;
+import org.openactive.SpringBaseApp.login.LoginRequest;
+import org.openactive.SpringBaseApp.login.LoginResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

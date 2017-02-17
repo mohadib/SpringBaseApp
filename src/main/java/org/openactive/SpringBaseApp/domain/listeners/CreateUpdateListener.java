@@ -1,4 +1,4 @@
-package org.openactive.ReactNotes.domain.listeners;
+package org.openactive.SpringBaseApp.domain.listeners;
 
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;

@@ -1,4 +1,4 @@
-package org.openactive.ReactNotes.login;
+package org.openactive.SpringBaseApp.login;
 
 public class LoginRequest
 {

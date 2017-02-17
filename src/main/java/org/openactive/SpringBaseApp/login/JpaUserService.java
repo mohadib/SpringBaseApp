@@ -1,7 +1,7 @@
-package org.openactive.ReactNotes.login;
+package org.openactive.SpringBaseApp.login;
 
-import org.openactive.ReactNotes.dao.UserDao;
-import org.openactive.ReactNotes.domain.User;
+import org.openactive.SpringBaseApp.dao.UserDao;
+import org.openactive.SpringBaseApp.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

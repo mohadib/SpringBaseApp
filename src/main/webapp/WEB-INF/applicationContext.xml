@@ -13,7 +13,7 @@
 
     <context:property-placeholder location="WEB-INF/application.properties"/>
 
-    <context:component-scan base-package="org.openactive.ReactNotes">
+    <context:component-scan base-package="org.openactive.SpringBaseApp">
         <context:exclude-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
         <!-- this makes intellij happy, it was seeing my spring config in a test and thought I had the same bean configured twice -->
         <context:exclude-filter expression="org.springframework.context.annotation.Configuration" type="annotation"/>
@@ -33,7 +33,7 @@
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <!-- This makes /META-INF/persistence.xml is no longer necessary -->
-        <property name="packagesToScan" value="org.openactive.ReactNotes.domain" />
+        <property name="packagesToScan" value="org.openactive.SpringBaseApp.domain" />
         <!-- JpaVendorAdapter implementation for Hibernate EntityManager.
              Exposes Hibernate's persistence provider and EntityManager extension interface -->
         <property name="jpaVendorAdapter">
@@ -58,7 +58,7 @@
          such as when @Transactional methods are invoked -->
     <tx:annotation-driven />
 
-    <jpa:repositories base-package="org.openactive.ReactNotes.dao" />
+    <jpa:repositories base-package="org.openactive.SpringBaseApp.dao" />
 
     <task:scheduler id="myScheduler" />
     <task:annotation-driven scheduler="myScheduler"/>
