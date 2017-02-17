@@ -38,7 +38,7 @@ public class User implements CreatableAndUpdateable
   @Column(name = "lastUpdated" )
   private Date lastUpdated;
 
-  @ManyToMany
+  @ManyToMany(fetch = FetchType.EAGER)
   List<Role> roles;
 
   public Integer getId()

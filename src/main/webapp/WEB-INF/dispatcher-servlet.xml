@@ -11,5 +11,6 @@
     <security:global-method-security secured-annotations="enabled" />
     <mvc:annotation-driven />
     <context:component-scan base-package="org.openactive.SpringBaseApp.controller"/>
+    <bean class="org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration"/>
 
 </beans>

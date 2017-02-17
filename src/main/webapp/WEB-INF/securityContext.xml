@@ -26,6 +26,7 @@
 
     <http use-expressions="true" entry-point-ref="authenticationEntryPoint">
         <csrf disabled="true"/>
+        <http-basic/>
         <intercept-url pattern="/api/login" access="permitAll()"/>
         <intercept-url pattern="/api/**" access="hasRole('ROLE_USER')"/>
     </http>
