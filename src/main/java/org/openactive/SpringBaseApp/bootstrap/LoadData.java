@@ -9,7 +9,7 @@ import org.springframework.context.event.ContextRefreshedEvent;
 
 public abstract class LoadData implements ApplicationListener< ContextRefreshedEvent >
 {
-  final Logger LOG = LoggerFactory.getLogger( getClass() );
+  private final Logger LOG = LoggerFactory.getLogger( getClass() );
 
   @Value( "${app.env:PROD}" )
   private String env;
@@ -32,7 +32,7 @@ public abstract class LoadData implements ApplicationListener< ContextRefreshedE
       LOG.info( "hbm2ddl is not create-drop, not calling load()" );
       return;
     }
-    if ( contextRefreshedEvent.getApplicationContext().getDisplayName().indexOf( "Root" ) == -1 )
+    if ( !contextRefreshedEvent.getApplicationContext().getDisplayName().contains( "Root" ) )
     {
       LOG.info( "Non root context event, not calling load()" );
       return;

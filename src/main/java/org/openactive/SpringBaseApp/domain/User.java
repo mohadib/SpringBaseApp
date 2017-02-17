@@ -40,7 +40,7 @@ public class User implements CreatableAndUpdateable
   private Date lastUpdated;
 
   @ManyToMany(fetch = FetchType.EAGER)
-  List<Role> roles;
+  private List<Role> roles;
 
   public Integer getId()
   {

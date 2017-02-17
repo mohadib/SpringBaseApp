@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserDao extends JpaRepository<User, Integer>
 {
-  public User findOneByEmail( String email );
+  User findOneByEmail( String email );
 }

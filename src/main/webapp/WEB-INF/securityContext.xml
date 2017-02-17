@@ -14,7 +14,7 @@
         <authentication-provider ref="authProvider"/>
     </authentication-manager>
 
-    <beans:bean name="authenticationEntryPoint" class="org.springframework.security.web.authentication.Http403ForbiddenEntryPoint"/>
+    <!-- <beans:bean name="authenticationEntryPoint" class="org.springframework.security.web.authentication.Http403ForbiddenEntryPoint"/> -->
     <beans:bean name="userService" class="org.openactive.SpringBaseApp.login.JpaUserService"/>
     <beans:bean name="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
         <beans:constructor-arg name="strength" value="${password.strength}"/>
@@ -24,9 +24,10 @@
         <beans:property name="passwordEncoder" ref="passwordEncoder"/>
     </beans:bean>
 
-    <http use-expressions="true" entry-point-ref="authenticationEntryPoint">
+    <http use-expressions="true" auto-config="true">
         <csrf disabled="true"/>
         <http-basic/>
+        <form-login/>
         <intercept-url pattern="/api/login" access="permitAll()"/>
         <intercept-url pattern="/api/**" access="hasRole('ROLE_USER')"/>
     </http>
