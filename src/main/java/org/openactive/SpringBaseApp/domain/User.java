@@ -1,5 +1,6 @@
 package org.openactive.SpringBaseApp.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.openactive.SpringBaseApp.domain.listeners.CreatableAndUpdateable;
 import org.openactive.SpringBaseApp.domain.listeners.CreateUpdateListener;
 
@@ -61,6 +62,7 @@ public class User implements CreatableAndUpdateable
     this.email = email;
   }
 
+  @JsonIgnore
   public String getPassword()
   {
     return password;
